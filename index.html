@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <title>JavaScript Lab</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          JAVASCRIPT <span>LAB</span><i class="ph ph-diamonds-four"></i>
+        </div>
+        <button id="theme-toggle" class="theme_toggle">
+          <i class="ph ph-moon"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="counter" class="section">
+        <h2>COUNTER</h2>
+        <div class="con">
+          <button id="minus-5" class="button minus">- 5</button>
+          <button id="minus" class="button minus">
+            <i class="ph ph-minus"></i>
+          </button>
+          <div id="display-number" class="display_number">0</div>
+          <button id="plus" class="button plus">
+            <i class="ph ph-plus"></i>
+          </button>
+          <button id="plus-5" class="button plus">+ 5</button>
+          <button id="reset" class="button reset">
+            <i class="ph ph-x"></i>
+          </button>
+        </div>
+      </section>
+
+      <section id="table" class="table">
+        <h2>TABLES</h2>
+        <table>
+          <caption>
+            First Table Practice
+          </caption>
+          <tr>
+            <th>&nbsp;</th>
+            <td>Knocky</td>
+            <td>Flor</td>
+            <td>Ella</td>
+            <td>Juan</td>
+          </tr>
+          <tr>
+            <th>Breed</th>
+            <td>Jack Russell</td>
+            <td>Poodle</td>
+            <td>Streetdog</td>
+            <td>Cocker Spaniel</td>
+          </tr>
+          <tr>
+            <th>Age</th>
+            <td>16</td>
+            <td>9</td>
+            <td>10</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <th>Owner</th>
+            <td>Mother-in-law</td>
+            <td>Me</td>
+            <td>Me</td>
+            <td>Sister-in-law</td>
+          </tr>
+          <tr>
+            <th>Eating Habits</th>
+            <td>Eats everyone's leftovers</td>
+            <td>Nibbles at food</td>
+            <td>Hearty eater</td>
+            <td>Will eat till he explodes</td>
+          </tr>
+        </table>
+
+        <table>
+          <tr>
+            <th colspan="2">Animals</th>
+          </tr>
+          <tr>
+            <th colspan="2">Hippopotamus</th>
+          </tr>
+          <tr>
+            <th rowspan="2">Horse</th>
+            <td>Mare</td>
+          </tr>
+          <tr>
+            <td>Stallion</td>
+          </tr>
+          <tr>
+            <th colspan="2">Crocodile</th>
+          </tr>
+          <tr>
+            <th rowspan="2">Chicken</th>
+            <td>Hen</td>
+          </tr>
+          <tr>
+            <td>Rooster</td>
+          </tr>
+        </table>
+      </section>
+
+      <section id="colour-picker" class="clour_picker">
+        <h2>COLOUR PICKER</h2>
+        <div id="colour-con" class="colour_con">
+          <div class="hex_con">
+            <div id="hex-div" class="hex_div">------</div>
+            <button id="copy"><i class="ph ph-copy"></i></button>
+            <div id="copy-msg" class="copy_msg">Copied!</div>
+          </div>
+          <div id="colour-history"></div>
+          <button id="colour-pick" class="colour_pick">CHANGE COLOUR</button>
+        </div>
+      </section>
+
+      <section id="form" class="form">
+        <h2>FORM</h2>
+        <div id="form-con" class="form_con">
+          <form id="form" class="form">
+            <h3>FILL APPROPRIATELY</h3>
+
+            <input type="text" id="name-input" class="form_input" placeholder="Jane Doe">
+            <span id="name-error" class="error_msg"></span>
+
+            <input type="email" id="email-input" class="form_input" placeholder="janedoe@email.com">
+            <span id="email-error" class="error_msg"></span>
+
+            <input type="password" id="password-input" class="form_input" placeholder="********">
+            <span id="password-error" class="error_msg"></span>
+
+            <span id="success-msg" class="success_msg"></span>
+
+            <button id="submit-button" class="submit_button">SUBMIT</button>
+          </form>
+
+          <div class="list_con" id="list-con">
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
