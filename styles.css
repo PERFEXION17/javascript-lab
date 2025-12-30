@@ -131,6 +131,13 @@ main {
 COUNTER
 =====*/
 
+.counter{
+  margin: 2rem;
+  padding-bottom: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
 .con {
   width: 70%;
   max-width: 30rem;
@@ -201,6 +208,13 @@ COUNTER
 TABLES
 =====*/
 
+.table{
+  margin: 2rem;
+  padding-bottom: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
 table {
   margin: 1rem auto;
   color: var(--text-colour);
@@ -242,6 +256,13 @@ caption {
 /*=====
 COLOUR PICKER
 =====*/
+
+.colour_picker{
+  margin: 2rem;
+  padding-bottom: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
 
 .colour_con {
   width: 90%;
@@ -366,7 +387,7 @@ FORM
   padding: 0.5rem 1rem;
   font-family: var(--font);
   font-size: 1rem;
-  border: none;
+  border: var(--border);
   outline: none;
   border-radius: var(--border-radius);
 }
@@ -474,6 +495,88 @@ FORM
   color: var(--text-colour);
   font-size: 1rem;
   font-weight: 700;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/*=====
+TO-DO
+=====*/
+
+.to_do{
+  margin: 2rem;
+  padding-bottom: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.todo_con{
+  /* width: max-content; */
+  margin: 0 2rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.todo_input_div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.todo_input{
+  padding: 0.5rem 1rem;
+  font-family: var(--font);
+  font-size: 1rem;
+  border: var(--border);
+  outline: none;
+  border-radius: var(--border-radius);
+}
+
+.todo_input:focus{
+  border: 2px solid var(--primary-colour);
+}
+
+.add_todo{
+  padding: .5rem 1rem;
+  background-color: var(--green);
+  color: var(--text-colour);
+  font-size: 1rem;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.todo_list{
+  padding: 1rem;
+}
+
+.input_item{
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: .5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--text-colour);
+  border: var(--border);
+  border-radius: var(--border-radius);
+}
+
+.todo_delete{
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  background-color: var(--red);
+  color: var(--text-colour);
   border: var(--border);
   border-radius: var(--border-radius);
   cursor: pointer;
