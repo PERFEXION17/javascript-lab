@@ -156,7 +156,7 @@ const submitBtn = document.getElementById("submit-button");
 const nameError = document.getElementById("name-error");
 const emailError = document.getElementById("email-error");
 const passwordError = document.getElementById("password-error");
-const successMsg = document.getElementById('success-msg')
+const successMsg = document.getElementById("success-msg");
 const listCon = document.getElementById("list-con");
 const inputFields = document.querySelectorAll("form_inputs");
 
@@ -165,8 +165,8 @@ function uploadForm() {
   let emailValue = emailInput.value.trim();
   let passwordValue = passwordInput.value.trim();
 
-  const passwordLength = passwordValue.length
-  const hash = '*'.repeat(passwordLength)
+  const passwordLength = passwordValue.length;
+  const hash = "*".repeat(passwordLength);
 
   const listBox = document.createElement("div");
   listBox.classList.add("list_box");
@@ -202,10 +202,10 @@ function uploadForm() {
   emailInput.value = "";
   passwordInput.value = "";
 
-  successMsg.textContent = 'Sucess'
-  successMsg.classList.add('show')
+  successMsg.textContent = "Success!";
+  successMsg.classList.add("show");
   setTimeout(() => {
-    successMsg.classList.remove('show')
+    successMsg.classList.remove("show");
   }, 2000);
 
   deleteBtn.addEventListener("click", () => {
@@ -237,7 +237,7 @@ function errorMessages() {
     setTimeout(() => {
       emailError.classList.remove("show");
     }, 1500);
-    return
+    return;
   } else if (passwordInput.value === "") {
     passwordError.textContent = `Password Required`;
     passwordError.classList.add("show");
@@ -260,4 +260,39 @@ function errorMessages() {
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
   errorMessages();
+});
+
+/*=====
+TODO APP v_1.0
+=====*/
+
+const inputField = document.getElementById("todo-input");
+const addBtn = document.getElementById("add-todo");
+const todoList = document.getElementById("todo-list");
+
+function addTodo() {
+  const inputData = inputField.value.trim();
+
+  inputItem = document.createElement("li");
+  inputItem.classList.add("input_item");
+  inputItem.textContent = inputData;
+
+  const inputDelete = document.createElement('button')
+  inputDelete.classList.add("todo_delete)");
+  inputDelete.textContent = "X";
+
+  todoList.appendChild(inputItem);
+  todoList.appendChild(inputDelete)
+
+  inputField.value = "";
+}
+
+addBtn.addEventListener("click", () => {
+  addTodo();
+});
+
+inputField.addEventListener("keypress", (e) => {
+  if(e.key === 'Enter'){
+    addTodo()
+  }
 });
