@@ -131,7 +131,7 @@ main {
 COUNTER
 =====*/
 
-.counter{
+.counter {
   margin: 2rem;
   padding-bottom: 1rem;
   border: var(--border);
@@ -208,7 +208,7 @@ COUNTER
 TABLES
 =====*/
 
-.table{
+.table {
   margin: 2rem;
   padding-bottom: 1rem;
   border: var(--border);
@@ -257,7 +257,7 @@ caption {
 COLOUR PICKER
 =====*/
 
-.colour_picker{
+.colour_picker {
   margin: 2rem;
   padding-bottom: 1rem;
   border: var(--border);
@@ -406,13 +406,13 @@ FORM
   cursor: pointer;
 }
 
-.submit_button:active{
-  scale: .95;
+.submit_button:active {
+  scale: 0.95;
 }
 
-.error_msg{
-  margin: .5rem;
-  padding: .5rem 2rem;
+.error_msg {
+  margin: 0.5rem;
+  padding: 0.5rem 2rem;
   display: none;
   background-color: var(--red);
   color: var(--bg-colour);
@@ -420,31 +420,31 @@ FORM
   border-radius: var(--border-radius);
 }
 
-.error_msg.show{
+.error_msg.show {
   display: block;
-  animation: shake .4s linear ;
+  animation: shake 0.4s linear;
 }
 
 @keyframes shake {
-  0%{
-    transform: translateX(-.5rem);
+  0% {
+    transform: translateX(-0.5rem);
   }
-  25%{
-    transform: translateX(.5rem);
+  25% {
+    transform: translateX(0.5rem);
   }
-  50%{
+  50% {
     transform: translateX(-1rem);
   }
-  75%{
+  75% {
     transform: translateX(1rem);
   }
-  100%{
+  100% {
     transform: translateX(0);
   }
 }
 
-.success_msg{
-  padding: .5rem 2rem;
+.success_msg {
+  padding: 0.5rem 2rem;
   display: none;
   background-color: var(--green);
   color: var(--text-colour);
@@ -452,7 +452,7 @@ FORM
   border-radius: var(--border-radius);
 }
 
-.success_msg.show{
+.success_msg.show {
   display: block;
 }
 
@@ -488,9 +488,9 @@ FORM
   border-radius: var(--border-radius);
 }
 
-.list_box button{
+.list_box button {
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   background: var(--red);
   color: var(--text-colour);
   font-size: 1rem;
@@ -504,14 +504,14 @@ FORM
 TO-DO
 =====*/
 
-.to_do{
+.to_do {
   margin: 2rem;
   padding-bottom: 1rem;
   border: var(--border);
   border-radius: var(--border-radius);
 }
 
-.todo_con{
+.todo_con {
   /* width: max-content; */
   margin: 0 2rem;
   padding: 1rem;
@@ -525,14 +525,15 @@ TO-DO
   transition: var(--transition);
 }
 
-.todo_input_div{
+.todo_input_div {
+  padding-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
 }
 
-.todo_input{
+.todo_input {
   padding: 0.5rem 1rem;
   font-family: var(--font);
   font-size: 1rem;
@@ -541,12 +542,12 @@ TO-DO
   border-radius: var(--border-radius);
 }
 
-.todo_input:focus{
+.todo_input:focus {
   border: 2px solid var(--primary-colour);
 }
 
-.add_todo{
-  padding: .5rem 1rem;
+.add_todo {
+  padding: 0.5rem 1rem;
   background-color: var(--green);
   color: var(--text-colour);
   font-size: 1rem;
@@ -555,14 +556,14 @@ TO-DO
   cursor: pointer;
 }
 
-.todo_list{
+.todo_list {
   padding: 1rem;
 }
 
-.input_item{
+.input_item {
   width: 100%;
   margin-bottom: 1rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -572,12 +573,27 @@ TO-DO
   border-radius: var(--border-radius);
 }
 
-.todo_delete{
-  padding: .5rem 1rem;
+.todo_delete {
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   background-color: var(--red);
   color: var(--text-colour);
   border: var(--border);
   border-radius: var(--border-radius);
   cursor: pointer;
+}
+
+.todo_alert {
+  padding: 0.5rem 2rem;
+  display: none;
+  background: var(--red);
+  color: var(--text-colour);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.todo_alert.show {
+  display: block;
+  animation: shake 0.4s linear;
 }

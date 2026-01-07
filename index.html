@@ -132,13 +132,28 @@
           <form id="form" class="form">
             <h3>FILL APPROPRIATELY</h3>
 
-            <input type="text" id="name-input" class="form_input" placeholder="Jane Doe">
+            <input
+              type="text"
+              id="name-input"
+              class="form_input"
+              placeholder="Jane Doe"
+            />
             <span id="name-error" class="error_msg"></span>
 
-            <input type="email" id="email-input" class="form_input" placeholder="janedoe@email.com">
+            <input
+              type="email"
+              id="email-input"
+              class="form_input"
+              placeholder="janedoe@email.com"
+            />
             <span id="email-error" class="error_msg"></span>
 
-            <input type="password" id="password-input" class="form_input" placeholder="********">
+            <input
+              type="password"
+              id="password-input"
+              class="form_input"
+              placeholder="********"
+            />
             <span id="password-error" class="error_msg"></span>
 
             <span id="success-msg" class="success_msg"></span>
@@ -146,16 +161,23 @@
             <button id="submit-button" class="submit_button">SUBMIT</button>
           </form>
 
-          <div class="list_con" id="list-con">
-            
-          </div>
+          <div class="list_con" id="list-con"></div>
         </div>
       </section>
 
       <section id="to-do" class="to_do">
         <h2>TO-DO APP v.1.0</h2>
         <div class="todo_con">
-          <div class="todo_input_div"><input type="text" id="todo-input" class="todo_input" placeholder="What do you want to do?"> <button id="add-todo" class="add_todo">ADD</button></div>
+          <div class="todo_input_div">
+            <input
+              type="text"
+              id="todo-input"
+              class="todo_input"
+              placeholder="What do you want to do?"
+            />
+            <button id="add-todo" class="add_todo">ADD</button>
+          </div>
+          <span id="todo-alert" class="todo_alert">Seriously, what do you want to do?</span>
           <ul id="todo-list" class="todo_list"></ul>
         </div>
       </section>

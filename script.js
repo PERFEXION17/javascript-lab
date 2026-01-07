@@ -263,36 +263,61 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 /*=====
-TODO APP v_1.0
+TODO APP v.1.0
 =====*/
 
 const inputField = document.getElementById("todo-input");
 const addBtn = document.getElementById("add-todo");
 const todoList = document.getElementById("todo-list");
+const todoAlert = document.getElementById("todo-alert");
+let todoArray = [];
 
 function addTodo() {
   const inputData = inputField.value.trim();
+  if (inputField.value === "") {
+    todoError();
+    return;
+  }
 
-  inputItem = document.createElement("li");
-  inputItem.classList.add("input_item");
-  inputItem.textContent = inputData;
-
-  const inputDelete = document.createElement('button')
-  inputDelete.classList.add("todo_delete)");
-  inputDelete.textContent = "X";
-
-  todoList.appendChild(inputItem);
-  todoList.appendChild(inputDelete)
-
+  todoArray.push(inputData);
+renderTodo();
   inputField.value = "";
 }
 
+function renderTodo() {
+  todoList.textContent = "";
+  todoArray.forEach((todo, index) => {
+
+    const inputItem = document.createElement("li");
+    inputItem.classList.add("input_item");
+    inputItem.textContent = todo;
+
+    const inputDelete = document.createElement("button");
+    inputDelete.classList.add("todo_delete", "ph", "ph-x");
+
+    inputItem.appendChild(inputDelete);
+    todoList.appendChild(inputItem);
+
+    inputDelete.addEventListener("click", () => {
+      todoArray.splice(index, 1);
+      renderTodo();
+    });
+  });
+}
+
+function todoError() {
+  todoAlert.classList.add("show");
+  setTimeout(() => {
+    todoAlert.classList.remove("show");
+  }, 2000);
+}
+
 addBtn.addEventListener("click", () => {
-  addTodo();
+  addTodo()
 });
 
 inputField.addEventListener("keypress", (e) => {
-  if(e.key === 'Enter'){
-    addTodo()
+  if (e.key === "Enter") {
+    addTodo();
   }
 });
